@@ -290,7 +290,8 @@ We welcome contributions! Please:
 
 ## License
 
-This project is open source. See LICENSE file for details.
+This project is open source. See LICENSE file for details. 
+
 
 ## Support
 
@@ -307,4 +308,4 @@ For issues, questions, or suggestions:
 
 ---
 
-**Made with ❤️ by pipi-tech**
+**Made by pipi-tech**
