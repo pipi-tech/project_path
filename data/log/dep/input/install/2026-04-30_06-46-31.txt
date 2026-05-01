@@ -1,0 +1,7 @@
+project=linguistics
+ts=2026-04-30_06-46-31
+user=maven
+session_hash=no-session
+manager=1254559
+package=
+node=pop-os

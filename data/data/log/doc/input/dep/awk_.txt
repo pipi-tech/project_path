@@ -1,0 +1,8 @@
+project=awk
+dep=2026-05-01_02-26-23
+manager=5990
+action=
+ts=
+user=maven
+node=pop-os
+event=dep_watch

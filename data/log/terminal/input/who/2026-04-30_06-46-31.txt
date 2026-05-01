@@ -1,0 +1,7 @@
+maven
+hash=f114a3c0adeff01ed38bc5ecc8a0780c0f7b45116306836b770ec042d66ed54f
+session=3
+tty=not a tty
+no-tty
+display=:1
+ppid=1254559

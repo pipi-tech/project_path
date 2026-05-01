@@ -1,0 +1,6 @@
+project=awk
+dest=2026-05-01_02-26-23
+ts=5990
+user=maven
+node=pop-os
+event=scaffold

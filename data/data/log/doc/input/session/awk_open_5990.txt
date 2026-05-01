@@ -1,0 +1,8 @@
+project=awk
+session_file=2026-05-01_02-26-23
+ts=5990
+user=maven
+node=pop-os
+tty=not a tty
+no-tty
+event=session_open

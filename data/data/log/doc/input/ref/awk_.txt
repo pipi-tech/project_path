@@ -1,0 +1,7 @@
+project=awk
+ref_file=2026-05-01_02-26-23
+scripts_documented=5990
+ts=
+user=maven
+node=pop-os
+event=ref_gen

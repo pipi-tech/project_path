@@ -1,0 +1,96 @@
+# ── identity ──────────────────────────────────────────────
+[project]
+name        = "project_path"
+version     = "0.1.0"
+description = ""
+state       = "active"
+author      = "maven"
+
+# ── type ──────────────────────────────────────────────────
+[type]
+domain      = "unknown"
+subtype     = ""
+category    = ""
+
+# ── runtime ───────────────────────────────────────────────
+[runtime]
+env         = "dev"
+target      = "local"
+venv        = ".venv"
+min_ram     = ""
+min_disk    = ""
+
+# ── managers ──────────────────────────────────────────────
+[managers]
+active      = "pip"
+pip         = "true"
+apt         = ""
+npm         = ""
+cargo       = ""
+conda       = ""
+
+# ── dependencies ──────────────────────────────────────────
+[dependencies]
+python      = "3.12.3"
+requires    = ["absl-py","annotated-doc","anyio","arrow","astunparse","certifi","charset-normalizer","click","filelock","flatbuffers","fsspec","gast","google-pasta","grpcio","h11","h5py","hf-xet","httpcore","httpx","huggingface_hub","idna","joblib","keras","libclang","markdown-it-py","mdurl","ml_dtypes","namex","nltk","numpy","opt_einsum","optree","packaging","protobuf","Pygments","python-dateutil","PyYAML","regex","requests","rich","safetensors","setuptools","shellingham","six","tensorflow","termcolor","textblob","tokenizers","tqdm","transformers","typer","typing_extensions","tzdata","urllib3","wheel","wrapt"]
+dev         = []
+peer        = []
+apt         = []
+npm         = []
+cargo       = []
+
+# ── fingerprint ───────────────────────────────────────────
+[fingerprint]
+hash            = "c72bcd6f571713adf12e1d61fcc28665c7bfa001175e9a509f87cefa0817631d"
+generated_at    = "2026-04-29_20-34-17"
+generated_by    = "maven"
+last_known_good = ""
+
+# ── snap ──────────────────────────────────────────────────
+[snap]
+name        = ""
+tier        = ""
+path        = ""
+created_at  = ""
+created_by  = ""
+
+# ── log domains ───────────────────────────────────────────
+[log]
+active = ["terminal","registry","dep"]
+
+# ── registry ──────────────────────────────────────────────
+[registry]
+project_id  = "fd83d53d-2dfd-4dc8-9f6c-31f8192a6b84"
+node        = "pop-os"
+locked_by   = ""
+lock_time   = ""
+
+# ── container ─────────────────────────────────────────────
+[container]
+type        = ""
+image       = ""
+status      = "idle"
+node        = "pop-os"
+vhd         = ""
+
+
+[dependencies.pip.nlp]
+requires = ["huggingface_hub==1.12.2","nltk==3.9.4","safetensors==0.7.0","textblob==0.20.0","tokenizers==0.22.2","transformers==5.7.0"]
+
+[dependencies.pip.ml]
+requires = ["absl-py==2.4.0","astunparse==1.6.3","flatbuffers==25.12.19","gast==0.7.0","google-pasta==0.2.0","keras==3.14.0","libclang==18.1.1","ml_dtypes==0.5.4","namex==0.1.0","opt_einsum==3.4.0","optree==0.19.0","tensorflow==2.21.0","termcolor==3.3.0","wrapt==2.1.2"]
+
+[dependencies.pip.data]
+requires = ["arrow==1.4.0","h5py==3.14.0","numpy==2.4.4","python-dateutil==2.9.0.post0","tqdm==4.67.3","tzdata==2026.2"]
+
+[dependencies.pip.http]
+requires = ["anyio==4.13.0","certifi==2026.4.22","filelock==3.29.0","fsspec==2026.3.0","grpcio==1.80.0","h11==0.16.0","hf-xet==1.4.3","httpcore==1.0.9","httpx==0.28.1","idna==3.13","protobuf==7.34.1","requests==2.33.1","urllib3==2.6.3"]
+
+[dependencies.pip.cli]
+requires = ["annotated-doc==0.0.4","click==8.3.3","Pygments==2.20.0","rich==15.0.0","shellingham==1.5.4","typer==0.25.0"]
+
+[dependencies.pip.build]
+requires = ["packaging==26.2","setuptools==82.0.1","wheel==0.47.0"]
+
+[dependencies.pip.util]
+requires = ["charset-normalizer==3.4.7","joblib==1.5.3","markdown-it-py==4.0.0","mdurl==0.1.2","PyYAML==6.0.3","regex==2026.4.4","six==1.17.0","typing_extensions==4.15.0"]

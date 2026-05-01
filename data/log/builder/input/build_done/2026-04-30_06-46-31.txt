@@ -1,0 +1,4 @@
+project=linguistics
+fingerprint=1254559
+uuid=
+user=maven

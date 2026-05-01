@@ -1,0 +1,153 @@
+project=maven
+ts=2026-04-30_16-49-51
+user=maven
+pip=/usr/bin/pip
+site=/usr/local/lib/python3.12/dist-packages
+--- pip freeze ---
+annotated-types==0.7.0
+anyio==4.13.0
+bcc==0.29.1
+blinker==1.7.0
+Brlapi==0.8.5
+Brotli==1.1.0
+certifi==2023.11.17
+chardet==5.2.0
+click==8.1.6
+colorama==0.4.6
+command-not-found==0.3
+cryptography==41.0.7
+cupshelpers==1.0
+dasbus==1.7
+dbus-python==1.3.2
+defer==1.0.6
+dill==0.4.1
+distro==1.9.0
+filelock==3.29.0
+h11==0.16.0
+httpcore==1.0.9
+httplib2==0.20.4
+httpx==0.28.1
+idna==3.6
+kernelstub==3.1.4
+language-selector==0.1
+launchpadlib==1.11.0
+lazr.restfulclient==0.14.6
+lazr.uri==1.0.6
+libvirt-python==10.0.0
+linkify-it-py==2.1.0
+louis==3.29.0
+markdown-it-py==3.0.0
+mdit-py-plugins==0.5.0
+mdurl==0.1.2
+meson==1.3.2
+mutagen==1.46.0
+netaddr==0.8.0
+netifaces==0.11.0
+nlp==0.4.0
+numpy==2.4.4
+oauthlib==3.2.2
+packaging==24.0
+pandas==3.0.2
+platformdirs==4.9.6
+pop-transition==1.1.2
+psutil==5.9.8
+pyarrow==24.0.0
+pycairo==1.25.1
+pycryptodomex==3.20.0
+pycups==2.0.1
+pydantic==2.13.3
+pydantic_core==2.46.3
+Pygments==2.20.0
+PyGObject==3.48.2
+PyJWT==2.7.0
+pyparsing==3.1.1
+python-apt==2.7.7+ubuntu5.1
+python-dateutil==2.9.0.post0
+python-debian==0.1.49+ubuntu2
+python-gnupg==0.5.2
+pyxdg==0.28
+PyYAML==6.0.1
+ranger-fm==1.9.3
+Repolib==2.2.2
+repoman==1.4.0
+requests==2.31.0
+rich==15.0.0
+scipy==1.17.1
+setproctitle==1.3.3
+setuptools==68.1.2
+six==1.16.0
+systemd-python==235
+textual==8.2.4
+tqdm==4.67.3
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+ubuntu-drivers-common==0.0.0
+ubuntu-pro-client==8001
+uc-micro-py==2.0.0
+ufw==0.36.2
+urllib3==2.0.7
+wadllib==1.3.6
+websockets==10.4
+wheel==0.42.0
+xdg==5
+xkit==0.0.0
+xxhash==3.7.0
+yt-dlp==2024.4.9
+--- tree site-packages ---
+/usr/local/lib/python3.12/dist-packages
+/home/maven/.local/lib/python3.12/site-packages
+├── annotated_types
+├── annotated_types-0.7.0.dist-info
+├── anyio
+├── anyio-4.13.0.dist-info
+├── dateutil
+├── dill
+├── dill-0.4.1.dist-info
+├── filelock
+├── filelock-3.29.0.dist-info
+├── h11
+├── h11-0.16.0.dist-info
+├── httpcore
+├── httpcore-1.0.9.dist-info
+├── httpx
+├── httpx-0.28.1.dist-info
+├── linkify_it
+├── linkify_it_py-2.1.0.dist-info
+├── mdit_py_plugins
+├── mdit_py_plugins-0.5.0.dist-info
+├── nlp
+├── nlp-0.4.0.dist-info
+├── numpy
+├── numpy-2.4.4.dist-info
+├── numpy.libs
+├── pandas
+├── pandas-3.0.2.dist-info
+├── platformdirs
+├── platformdirs-4.9.6.dist-info
+├── pyarrow
+├── pyarrow-24.0.0.dist-info
+├── __pycache__
+├── pydantic
+├── pydantic-2.13.3.dist-info
+├── pydantic_core
+├── pydantic_core-2.46.3.dist-info
+├── pygments
+├── pygments-2.20.0.dist-info
+├── python_dateutil-2.9.0.post0.dist-info
+├── rich
+├── rich-15.0.0.dist-info
+├── scipy
+├── scipy-1.17.1.dist-info
+├── scipy.libs
+├── textual
+├── textual-8.2.4.dist-info
+├── tqdm
+├── tqdm-4.67.3.dist-info
+├── typing_extensions-4.15.0.dist-info
+├── typing_extensions.py
+├── typing_inspection
+├── typing_inspection-0.4.2.dist-info
+├── uc_micro
+├── uc_micro_py-2.0.0.dist-info
+├── xxhash
+└── xxhash-3.7.0.dist-info

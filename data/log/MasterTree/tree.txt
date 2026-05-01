@@ -1,0 +1,246 @@
+(.venv) maven@pop-os:~/project/project_path$ cat << 'EOF' > overlay_engine.sh
+#!/usr/bin/env bash
+
+build_merged() {
+  rm -rf overlay/merged/*
+  mkdir -p overlay/merged
+  cp -r overlay/base/* overlay/merged/ 2>/dev/null
+  cp -r overlay/mid/* overlay/merged/ 2>/dev/null
+  cp -r overlay/top/* overlay/merged/ 2>/dev/null
+}
+
+EOF
+(.venv) maven@pop-os:~/project/project_path$ clearlogs
+clearlogs: command not found
+(.venv) maven@pop-os:~/project/project_path$ clearLogs
+logs cleared
+(.venv) maven@pop-os:~/project/project_path$ tree
+.
+├── builder
+│   ├── input
+│   │   └── test.toml
+│   ├── output
+│   └── src
+│       ├── build.sh
+│       ├── compare_deps.sh
+│       ├── drift.sh
+│       ├── gen_fingerprint.sh
+│       ├── install_deps.sh
+│       ├── read_toml.sh
+│       ├── register.sh
+│       └── stamp_folders.sh
+├── cmd
+│   ├── builder
+│   │   ├── build.sh
+│   │   ├── compare_deps.sh
+│   │   ├── drift.sh
+│   │   └── fingerprint.sh
+│   ├── cli
+│   │   ├── master_log.sh
+│   │   ├── master_src.sh
+│   │   └── watch_silent.sh
+│   ├── combine.sh
+│   ├── config
+│   │   ├── add_dep.sh
+│   │   ├── classify_deps.sh
+│   │   ├── default
+│   │   ├── env
+│   │   ├── iso
+│   │   ├── local
+│   │   ├── migrate_toml.sh
+│   │   ├── onboard_deps.sh
+│   │   ├── pkg_classes.conf
+│   │   ├── remote
+│   │   ├── set_log_domains.sh
+│   │   ├── template
+│   │   │   └── blank.toml
+│   │   ├── type_registry.conf
+│   │   └── venv
+│   ├── dep
+│   │   ├── diff_deps.sh
+│   │   ├── snap_after.sh
+│   │   └── snap_before.sh
+│   ├── main
+│   ├── snap
+│   ├── terminal
+│   └── tui
+│       ├── dashboard.py
+│       ├── modals
+│       │   ├── __init__.py
+│       │   ├── new_project.py
+│       │   └── __pycache__
+│       │       ├── __init__.cpython-312.pyc
+│       │       └── new_project.cpython-312.pyc
+│       ├── panes
+│       │   ├── __init__.py
+│       │   ├── keybinds.py
+│       │   ├── logs.py
+│       │   ├── nav.py
+│       │   ├── projects.py
+│       │   ├── __pycache__
+│       │   │   ├── __init__.cpython-312.pyc
+│       │   │   ├── keybinds.cpython-312.pyc
+│       │   │   ├── logs.cpython-312.pyc
+│       │   │   ├── nav.cpython-312.pyc
+│       │   │   ├── projects.cpython-312.pyc
+│       │   │   ├── snaps.cpython-312.pyc
+│       │   │   └── toml_view.cpython-312.pyc
+│       │   ├── snaps.py
+│       │   └── toml_view.py
+│       └── styles
+│           ├── fsf.py
+│           └── __pycache__
+│               └── fsf.cpython-312.pyc
+├── cmd_list
+├── data
+│   ├── log
+│   │   ├── builder
+│   │   │   ├── input
+│   │   │   │   ├── build_done
+│   │   │   │   ├── build_start
+│   │   │   │   ├── build_step
+│   │   │   │   ├── dep_install
+│   │   │   │   └── drift
+│   │   │   ├── output
+│   │   │   └── src
+│   │   │       ├── on_build_done.sh
+│   │   │       ├── on_build_start.sh
+│   │   │       ├── on_build_step.sh
+│   │   │       ├── on_dep_install.sh
+│   │   │       └── on_drift.sh
+│   │   ├── cli
+│   │   │   ├── input
+│   │   │   ├── output
+│   │   │   └── src
+│   │   ├── config
+│   │   │   ├── input
+│   │   │   ├── output
+│   │   │   ├── snap
+│   │   │   │   ├── cold
+│   │   │   │   ├── hot
+│   │   │   │   └── warm
+│   │   │   └── src
+│   │   ├── dep
+│   │   │   ├── input
+│   │   │   │   ├── after
+│   │   │   │   ├── before
+│   │   │   │   ├── diff
+│   │   │   │   ├── install
+│   │   │   │   ├── managers
+│   │   │   │   └── silent
+│   │   │   ├── output
+│   │   │   └── src
+│   │   │       ├── detect_manager.sh.bak
+│   │   │       ├── diff_deps.sh.bak
+│   │   │       ├── on_install.sh
+│   │   │       ├── snap_after.sh.bak
+│   │   │       └── snap_before.sh.bak
+│   │   ├── logScr.sh
+│   │   ├── main
+│   │   │   ├── input
+│   │   │   ├── output
+│   │   │   └── src
+│   │   ├── MasterLOGText
+│   │   │   └── master_log.txt
+│   │   ├── MasterSCRText
+│   │   │   └── master_src.txt
+│   │   ├── MasterTree
+│   │   │   └── tree.txt
+│   │   ├── registry
+│   │   │   ├── input
+│   │   │   │   ├── accessed
+│   │   │   │   ├── drift
+│   │   │   │   ├── registered
+│   │   │   │   └── updated
+│   │   │   ├── output
+│   │   │   └── src
+│   │   │       ├── on_access.sh
+│   │   │       ├── on_drift.sh
+│   │   │       ├── on_register.sh
+│   │   │       └── on_update.sh
+│   │   ├── template
+│   │   ├── terminal
+│   │   │   ├── input
+│   │   │   │   ├── project
+│   │   │   │   ├── terminal
+│   │   │   │   ├── when
+│   │   │   │   └── who
+│   │   │   ├── output
+│   │   │   │   └── session.log
+│   │   │   └── src
+│   │   │       ├── project.sh
+│   │   │       ├── terminal.sh
+│   │   │       ├── when.sh
+│   │   │       └── who.sh
+│   │   └── tui
+│   │       ├── input
+│   │       ├── output
+│   │       └── src
+│   ├── registry.conf
+│   ├── registry.txt
+│   └── template
+│       ├── scaffold.sh
+│       └── structure.txt
+├── engines
+│   ├── builder
+│   │   ├── input
+│   │   │   └── test.toml
+│   │   ├── output
+│   │   └── src
+│   │       ├── build.sh
+│   │       ├── compare_deps.sh
+│   │       ├── drift.sh
+│   │       ├── gen_fingerprint.sh
+│   │       ├── install_deps.sh
+│   │       ├── read_toml.sh
+│   │       ├── register.sh
+│   │       └── stamp_folders.sh
+│   ├── drift_engine
+│   │   ├── input
+│   │   ├── output
+│   │   └── src
+│   │       └── main.sh
+│   ├── log_engine
+│   │   ├── input
+│   │   ├── output
+│   │   └── src
+│   │       └── main.sh
+│   ├── network
+│   │   ├── input
+│   │   ├── output
+│   │   └── src
+│   │       └── main.sh
+│   └── state_engine
+│       ├── input
+│       ├── output
+│       └── src
+│           └── main.sh
+├── functions
+│   ├── builder.sh
+│   ├── cli.sh
+│   ├── config.sh
+│   ├── dep_wrappers.sh
+│   ├── logs.sh
+│   ├── new.sh
+│   ├── proj.sh
+│   ├── registry.sh
+│   ├── template.sh
+│   └── tui.sh
+├── functions.sh
+├── overlay
+│   ├── base
+│   ├── merged
+│   ├── mid
+│   └── top
+├── overlay_engine.sh
+├── project.toml
+├── scaffold.sh
+├── tests
+│   ├── build_sim
+│   ├── concurrency
+│   ├── drift_sim
+│   └── state_sim
+└── v1Goal.txt
+
+121 directories, 105 files
+(.venv) maven@pop-os:~/project/project_path$

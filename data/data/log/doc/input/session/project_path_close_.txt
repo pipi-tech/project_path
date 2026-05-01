@@ -1,0 +1,7 @@
+project=project_path
+session_file=2026-05-01_02-35-36
+duration_seconds=5990
+ts=
+user=maven
+node=pop-os
+event=session_close

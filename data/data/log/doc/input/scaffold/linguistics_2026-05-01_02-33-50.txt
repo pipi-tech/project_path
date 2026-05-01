@@ -1,0 +1,6 @@
+project=linguistics
+dest=/home/maven/project/linguistics/docs
+ts=2026-05-01_02-33-50
+user=maven
+node=pop-os
+event=scaffold

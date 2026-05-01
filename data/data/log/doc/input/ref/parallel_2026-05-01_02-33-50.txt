@@ -1,0 +1,7 @@
+project=parallel
+ref_file=/home/maven/project/parallel/docs/ref/SCRIPTS.md
+scripts_documented=1
+ts=2026-05-01_02-33-50
+user=maven
+node=pop-os
+event=ref_gen

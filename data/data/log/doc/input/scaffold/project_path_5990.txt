@@ -1,0 +1,6 @@
+project=project_path
+dest=2026-05-01_02-35-36
+ts=5990
+user=maven
+node=pop-os
+event=scaffold

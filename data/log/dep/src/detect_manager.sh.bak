@@ -1,0 +1,18 @@
+#!/bin/bash
+PROJECT="$1"
+TS="$2"
+DIR=~/project/project_path/data/log/dep/input/managers
+mkdir -p "$DIR"
+
+MANAGERS=""
+[ -f "$(pwd)/pyproject.toml" ] && MANAGERS="$MANAGERS uv"
+[ -f "$(pwd)/requirements.txt" ] && MANAGERS="$MANAGERS pip"
+[ -d "$(pwd)/.venv" ] && MANAGERS="$MANAGERS venv"
+[ -d "$(pwd)/node_modules" ] && MANAGERS="$MANAGERS npm"
+[ -f "$(pwd)/Cargo.toml" ] && MANAGERS="$MANAGERS cargo"
+command -v conda &>/dev/null && MANAGERS="$MANAGERS conda"
+
+echo "project=$PROJECT" > "$DIR/$TS.txt"
+echo "managers=$MANAGERS" >> "$DIR/$TS.txt"
+echo "path=$(pwd)" >> "$DIR/$TS.txt"
+echo "user=$USER" >> "$DIR/$TS.txt"

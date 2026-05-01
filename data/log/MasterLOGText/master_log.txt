@@ -1,0 +1,88 @@
+======================================================
+  MASTER LOG REGISTRY
+  generated: 2026-04-29 13:48:54
+  node: pop-os  user: maven
+======================================================
+
+[ log structure ]
+/home/maven/project/project_path/data/log
+├── builder
+│   ├── input
+│   │   ├── build_done
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   ├── build_start
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   ├── build_step
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   ├── dep_install
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   └── drift
+│   │       └── 2026-04-29_13-43-08.txt
+│   ├── output
+│   └── src
+│       ├── on_build_done.sh
+│       ├── on_build_start.sh
+│       ├── on_build_step.sh
+│       ├── on_dep_install.sh
+│       └── on_drift.sh
+├── cli
+│   ├── input
+│   ├── output
+│   └── src
+├── config
+│   ├── input
+│   ├── output
+│   ├── snap
+│   │   ├── cold
+│   │   ├── hot
+│   │   └── warm
+│   └── src
+├── logScr.sh
+├── main
+│   ├── input
+│   ├── output
+│   └── src
+├── MasterLOGText
+│   └── master_log.txt
+├── MasterSCRText
+│   └── master_src.txt
+├── MasterTree
+│   └── tree.txt
+├── registry
+│   ├── input
+│   │   ├── accessed
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   ├── drift
+│   │   ├── registered
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   └── updated
+│   │       └── 2026-04-29_13-43-08.txt
+│   ├── output
+│   └── src
+│       ├── on_access.sh
+│       ├── on_drift.sh
+│       ├── on_register.sh
+│       └── on_update.sh
+├── template
+├── terminal
+│   ├── input
+│   │   ├── project
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   ├── terminal
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   ├── when
+│   │   │   └── 2026-04-29_13-43-08.txt
+│   │   └── who
+│   │       └── 2026-04-29_13-43-08.txt
+│   ├── output
+│   │   └── session.log
+│   └── src
+│       ├── project.sh
+│       ├── terminal.sh
+│       ├── when.sh
+│       └── who.sh
+└── tui
+    ├── input
+    ├── output
+    └── src
+

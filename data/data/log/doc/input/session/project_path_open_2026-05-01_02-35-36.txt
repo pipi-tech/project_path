@@ -1,0 +1,7 @@
+project=project_path
+session_file=/home/maven/project/project_path/docs/log/session_2026-05-01_02-35-36.txt
+ts=2026-05-01_02-35-36
+user=maven
+node=pop-os
+tty=/dev/pts/0
+event=session_open

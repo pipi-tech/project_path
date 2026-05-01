@@ -1,0 +1,241 @@
+project=linguistics
+ts=2026-04-30_06-46-39
+user=maven
+pip=/home/maven/project/linguistics/.venv/bin/pip
+site=/home/maven/project/linguistics/.venv/lib/python3.12/site-packages
+--- pip freeze ---
+absl-py==2.4.0
+annotated-doc==0.0.4
+anyio==4.13.0
+arrow==1.4.0
+astunparse==1.6.3
+certifi==2026.4.22
+charset-normalizer==3.4.7
+click==8.3.3
+filelock==3.29.0
+flatbuffers==25.12.19
+fsspec==2026.3.0
+gast==0.7.0
+google-pasta==0.2.0
+grpcio==1.80.0
+h11==0.16.0
+h5py==3.14.0
+hf-xet==1.4.3
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.12.2
+idna==3.13
+joblib==1.5.3
+keras==3.14.0
+libclang==18.1.1
+markdown-it-py==4.0.0
+mdurl==0.1.2
+ml_dtypes==0.5.4
+namex==0.1.0
+nltk==3.9.4
+numpy==2.4.4
+opt_einsum==3.4.0
+optree==0.19.0
+packaging==26.2
+protobuf==7.34.1
+Pygments==2.20.0
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+regex==2026.4.4
+requests==2.33.1
+rich==15.0.0
+safetensors==0.7.0
+setuptools==82.0.1
+shellingham==1.5.4
+six==1.17.0
+tensorflow==2.21.0
+termcolor==3.3.0
+textblob==0.20.0
+tokenizers==0.22.2
+tqdm==4.67.3
+transformers==5.7.0
+typer==0.25.0
+typing_extensions==4.15.0
+tzdata==2026.2
+urllib3==2.6.3
+wheel==0.47.0
+wrapt==2.1.2
+--- tree site-packages ---
+/home/maven/project/linguistics/.venv/lib/python3.12/site-packages
+├── 81d243bd2c585b0f4821__mypyc.cpython-312-x86_64-linux-gnu.so
+├── absl
+├── absl_py-2.4.0.dist-info
+├── annotated_doc
+├── annotated_doc-0.0.4.dist-info
+├── anyio
+├── anyio-4.13.0.dist-info
+├── arrow
+├── arrow-1.4.0.dist-info
+├── astunparse
+├── astunparse-1.6.3.dist-info
+├── certifi
+├── certifi-2026.4.22.dist-info
+├── charset_normalizer
+├── charset_normalizer-3.4.7.dist-info
+├── clang
+├── click
+├── click-8.3.3.dist-info
+├── dateutil
+├── _distutils_hack
+├── distutils-precedence.pth
+├── filelock
+├── filelock-3.29.0.dist-info
+├── flatbuffers
+├── flatbuffers-25.12.19.dist-info
+├── fsspec
+├── fsspec-2026.3.0.dist-info
+├── gast
+├── gast-0.7.0.dist-info
+├── google
+├── google_pasta-0.2.0.dist-info
+├── grpc
+├── grpcio-1.80.0.dist-info
+├── h11
+├── h11-0.16.0.dist-info
+├── h5py
+├── h5py-3.14.0.dist-info
+├── h5py.libs
+├── hf_xet
+├── hf_xet-1.4.3.dist-info
+├── httpcore
+├── httpcore-1.0.9.dist-info
+├── httpx
+├── httpx-0.28.1.dist-info
+├── huggingface_hub
+├── huggingface_hub-1.12.2.dist-info
+├── idna
+├── idna-3.13.dist-info
+├── joblib
+├── joblib-1.5.3.dist-info
+├── keras
+├── keras-3.14.0.dist-info
+├── libclang-18.1.1.dist-info
+├── markdown_it
+├── markdown_it_py-4.0.0.dist-info
+├── mdurl
+├── mdurl-0.1.2.dist-info
+├── ml_dtypes
+├── ml_dtypes-0.5.4.dist-info
+├── namex
+├── namex-0.1.0.dist-info
+├── nltk
+├── nltk-3.9.4.dist-info
+├── numpy
+├── numpy-2.4.4.dist-info
+├── numpy.libs
+├── opt_einsum
+├── opt_einsum-3.4.0.dist-info
+├── optree
+├── optree-0.19.0.dist-info
+├── packaging
+├── packaging-26.2.dist-info
+├── pasta
+├── pip
+├── pip-24.0.dist-info
+├── protobuf-7.34.1.dist-info
+├── __pycache__
+├── pygments
+├── pygments-2.20.0.dist-info
+├── python_dateutil-2.9.0.post0.dist-info
+├── pyyaml-6.0.3.dist-info
+├── regex
+├── regex-2026.4.4.dist-info
+├── requests
+├── requests-2.33.1.dist-info
+├── rich
+├── rich-15.0.0.dist-info
+├── safetensors
+├── safetensors-0.7.0.dist-info
+├── setuptools
+├── setuptools-82.0.1.dist-info
+├── shellingham
+├── shellingham-1.5.4.dist-info
+├── six-1.17.0.dist-info
+├── six.py
+├── tensorflow
+├── tensorflow-2.21.0.dist-info
+├── termcolor
+├── termcolor-3.3.0.dist-info
+├── textblob
+├── textblob-0.20.0.dist-info
+├── tokenizers
+├── tokenizers-0.22.2.dist-info
+├── tqdm
+├── tqdm-4.67.3.dist-info
+├── transformers
+├── transformers-5.7.0.dist-info
+├── typer
+├── typer-0.25.0.dist-info
+├── typing_extensions-4.15.0.dist-info
+├── typing_extensions.py
+├── tzdata
+├── tzdata-2026.2.dist-info
+├── urllib3
+├── urllib3-2.6.3.dist-info
+├── wheel
+├── wheel-0.47.0.dist-info
+├── wrapt
+├── wrapt-2.1.2.dist-info
+├── _yaml
+└── yaml
+/home/maven/.local/lib/python3.12/site-packages
+├── annotated_types
+├── annotated_types-0.7.0.dist-info
+├── anyio
+├── anyio-4.13.0.dist-info
+├── dateutil
+├── dill
+├── dill-0.4.1.dist-info
+├── filelock
+├── filelock-3.29.0.dist-info
+├── h11
+├── h11-0.16.0.dist-info
+├── httpcore
+├── httpcore-1.0.9.dist-info
+├── httpx
+├── httpx-0.28.1.dist-info
+├── linkify_it
+├── linkify_it_py-2.1.0.dist-info
+├── mdit_py_plugins
+├── mdit_py_plugins-0.5.0.dist-info
+├── nlp
+├── nlp-0.4.0.dist-info
+├── numpy
+├── numpy-2.4.4.dist-info
+├── numpy.libs
+├── pandas
+├── pandas-3.0.2.dist-info
+├── platformdirs
+├── platformdirs-4.9.6.dist-info
+├── pyarrow
+├── pyarrow-24.0.0.dist-info
+├── __pycache__
+├── pydantic
+├── pydantic-2.13.3.dist-info
+├── pydantic_core
+├── pydantic_core-2.46.3.dist-info
+├── pygments
+├── pygments-2.20.0.dist-info
+├── python_dateutil-2.9.0.post0.dist-info
+├── rich
+├── rich-15.0.0.dist-info
+├── scipy
+├── scipy-1.17.1.dist-info
+├── scipy.libs
+├── textual
+├── textual-8.2.4.dist-info
+├── tqdm
+├── tqdm-4.67.3.dist-info
+├── typing_extensions-4.15.0.dist-info
+├── typing_extensions.py
+├── typing_inspection
+├── typing_inspection-0.4.2.dist-info
+├── uc_micro
+├── uc_micro_py-2.0.0.dist-info
+├── xxhash
+└── xxhash-3.7.0.dist-info

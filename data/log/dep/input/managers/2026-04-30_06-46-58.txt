@@ -1,0 +1,8 @@
+project=linguistics
+ts=2026-04-30_06-46-58
+user=maven
+node=pop-os
+pip=57
+apt=392
+flatpak=8
+snap=0

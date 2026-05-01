@@ -1,0 +1,7 @@
+project=maven
+ts=2026-04-30_16-49-51
+user=maven
+session_hash=no-session
+manager=cargo
+package=--list
+node=pop-os

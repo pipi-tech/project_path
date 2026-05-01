@@ -1,0 +1,7 @@
+project=linguistics
+ref_file=2026-05-01_02-33-30
+scripts_documented=5990
+ts=
+user=maven
+node=pop-os
+event=ref_gen
