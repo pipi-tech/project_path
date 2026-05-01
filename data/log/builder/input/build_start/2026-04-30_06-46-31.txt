@@ -1,4 +1,0 @@
-project=linguistics
-toml=1254559
-user=maven
-node=pop-os

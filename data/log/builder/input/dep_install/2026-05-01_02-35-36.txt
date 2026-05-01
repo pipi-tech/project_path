@@ -1,3 +1,0 @@
-project=project_path
-dep=5990
-status=

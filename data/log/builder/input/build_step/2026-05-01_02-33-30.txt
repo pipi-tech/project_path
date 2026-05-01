@@ -1,3 +1,0 @@
-project=linguistics
-step=5990
-status=

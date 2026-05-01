@@ -1,6 +1,0 @@
-TERM: xterm-256color
-TTY: not a tty
-no-tty
-PPID: 6506
-SESSION: 45
-DISPLAY: :1

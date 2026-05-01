@@ -1,6 +1,0 @@
-project=parallel
-dest=/home/maven/project/parallel/docs
-ts=2026-05-01_02-33-50
-user=maven
-node=pop-os
-event=scaffold

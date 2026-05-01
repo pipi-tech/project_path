@@ -1,6 +1,0 @@
-project=project_path
-dest=/home/maven/project/project_path/docs
-ts=2026-05-01_02-33-50
-user=maven
-node=pop-os
-event=scaffold

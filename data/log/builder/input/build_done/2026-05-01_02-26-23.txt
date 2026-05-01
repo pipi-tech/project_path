@@ -1,4 +1,0 @@
-project=awk
-fingerprint=5990
-uuid=
-user=maven

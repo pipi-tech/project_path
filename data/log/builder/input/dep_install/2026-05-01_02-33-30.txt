@@ -1,3 +1,0 @@
-project=linguistics
-dep=5990
-status=

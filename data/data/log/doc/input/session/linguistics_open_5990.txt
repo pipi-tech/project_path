@@ -1,8 +1,0 @@
-project=linguistics
-session_file=2026-05-01_02-33-30
-ts=5990
-user=maven
-node=pop-os
-tty=not a tty
-no-tty
-event=session_open

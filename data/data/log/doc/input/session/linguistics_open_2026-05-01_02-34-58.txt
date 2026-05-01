@@ -1,7 +1,0 @@
-project=linguistics
-session_file=/home/maven/project/linguistics/docs/log/session_2026-05-01_02-34-58.txt
-ts=2026-05-01_02-34-58
-user=maven
-node=pop-os
-tty=/dev/pts/0
-event=session_open

@@ -1,7 +1,0 @@
-project=linguistics
-session_file=2026-05-01_02-33-30
-duration_seconds=5990
-ts=
-user=maven
-node=pop-os
-event=session_close

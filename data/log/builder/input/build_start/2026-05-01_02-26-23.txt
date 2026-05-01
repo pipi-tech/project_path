@@ -1,4 +1,0 @@
-project=awk
-toml=5990
-user=maven
-node=pop-os

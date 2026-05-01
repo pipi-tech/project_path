@@ -1,7 +1,0 @@
-project=project_path
-ts=2026-05-01_02-27-10
-user=maven
-session_hash=no-session
-manager=5990
-package=
-node=pop-os
