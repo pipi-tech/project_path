@@ -1,3 +1,6 @@
+ only in review stage, don't use yet not ready to eat with a fork
+
+
 # 🛣️ project_path
 
 > A comprehensive project scaffolding, organization, and documentation framework for managing development projects with integrated session tracking, dependency management, and automated doc generation.
