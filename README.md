@@ -14,6 +14,13 @@
 - **Environment Isolation** – Virtual environment management per project
 - **Fingerprinting** – Detect configuration drift and ensure consistency
 
+### 🧭 [Our Philosophy](docs/PHILOSOPHY.md)
+
+Want to understand *why* project_path exists and what we believe about projects?  
+Read our [Philosophy](docs/PHILOSOPHY.md) – a manifesto on how projects should live and breathe.
+
+---
+
 ## Quick Start
 
 ### Installation
@@ -290,8 +297,7 @@ We welcome contributions! Please:
 
 ## License
 
-This project is open source. See LICENSE file for details. 
-
+This project is open source. See LICENSE file for details.
 
 ## Support
 
@@ -308,4 +314,4 @@ For issues, questions, or suggestions:
 
 ---
 
-**Made by pipi-tech**
+**Made with ❤️ by pipi-tech**
