@@ -317,4 +317,4 @@ For issues, questions, or suggestions:
 
 ---
 
-**Made with ❤️ by pipi-tech**
+**Made by pipi-tech**
