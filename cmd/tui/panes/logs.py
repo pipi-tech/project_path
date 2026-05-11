@@ -1,8 +1,9 @@
-from textual.widgets import Static, Label, Log
+import os
 from pathlib import Path
+from textual.widgets import Static, Label, Log
 
-BASE     = Path.home() / "project/project_path"
-LOG_BASE = BASE / "data/log"
+_PTH_ROOT = Path(os.environ.get("PTH_ROOT", Path(__file__).parent.parent.parent.parent))
+LOG_BASE = _PTH_ROOT / "data/log"
 
 FSF_COLORS = {
     "terminal": "#09F911",

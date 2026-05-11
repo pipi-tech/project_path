@@ -1,20 +1,23 @@
 #!/bin/bash
+# WHAT:  Template commands — update snapshot, stamp target, show, tree
+# WIRES: Sourced by functions.sh → calls data/template/scaffold.sh
+# WHY:   Interface for the template system — captures and clones project_path structure
 
 tpl() {
   local cmd="${1}"
   case "$cmd" in
     update)
-      bash ~/project/project_path/data/template/scaffold.sh
+      bash "$PTH_ROOT/data/template/scaffold.sh"
       ;;
     stamp)
       [ -z "$2" ] && echo "usage: tpl stamp <target>" && return 1
-      bash ~/project/project_path/data/template/scaffold.sh "$2"
+      bash "$PTH_ROOT/data/template/scaffold.sh" "$2"
       ;;
     show)
-      cat ~/project/project_path/data/template/structure.txt | less
+      less "$PTH_ROOT/data/template/structure.txt"
       ;;
     tree)
-      tree ~/project/project_path \
+      tree "$PTH_ROOT" \
         -I "__pycache__|.venv|env/|.git" \
         --dirsfirst \
         --noreport \

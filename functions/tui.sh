@@ -1,4 +1,8 @@
 #!/bin/bash
+# WHAT:  TUI launcher — opens the Textual dashboard
+# WIRES: Sourced by functions.sh → calls cmd/tui/dashboard.py
+# WHY:   Interface layer for the TUI — keeps python path resolution in one place
+
 tui() {
-  /usr/bin/python3 ~/project/project_path/cmd/tui/dashboard.py
+  python3 "$PTH_ROOT/cmd/tui/dashboard.py"
 }

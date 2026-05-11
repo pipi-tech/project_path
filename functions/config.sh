@@ -1,5 +1,9 @@
 #!/bin/bash
-CMD_CONFIG=~/project/project_path/cmd/config
+# WHAT:  Config and dependency classification commands — domains, migrate, classify, onboard, pkg_managers
+# WIRES: Sourced by functions.sh → calls $PTH_ROOT/cmd/config/
+# WHY:   Interface layer for project configuration — dep classification, toml migration, log domain setup
+
+CMD_CONFIG="$PTH_ROOT/cmd/config"
 
 domains() {
   local cmd="${1:-show}"
@@ -76,7 +80,7 @@ pkg_managers() {
       ;;
     detect)
       local toml="${2:-$(pwd)/project.toml}"
-      echo "=== detecting: $(basename $(pwd)) ==="
+      echo "=== detecting: $(basename "$(pwd)") ==="
       MANAGERS=""
       [ -f ".venv/bin/pip" ]                                   && MANAGERS="$MANAGERS pip"   && echo "  ✓ pip"
       command -v cargo &>/dev/null && [ -f "Cargo.toml" ]      && MANAGERS="$MANAGERS cargo" && echo "  ✓ cargo"
@@ -90,9 +94,11 @@ pkg_managers() {
       fi
       ;;
     snapshot)
-      local project=$(basename $(pwd))
-      local TS=$(date '+%Y-%m-%d_%H-%M-%S')
-      local MGR_LOG=~/project/project_path/data/log/dep/input/managers
+      local project
+      project=$(basename "$(pwd)")
+      local TS
+      TS=$(date '+%Y-%m-%d_%H-%M-%S')
+      local MGR_LOG="$PTH_ROOT/data/log/dep/input/managers"
       mkdir -p "$MGR_LOG"
       {
         echo "project=$project"

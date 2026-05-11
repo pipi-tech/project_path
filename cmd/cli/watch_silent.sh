@@ -1,7 +1,13 @@
 #!/bin/bash
+# WHAT:  Silent dep watcher — monitors site-packages for installs that bypass pip wrapper
+# WIRES: Called by functions/logs.sh (watchDeps) → writes to data/log/dep/input/silent/
+# WHY:   Catches silent installs that don't go through the pip wrapper function
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
+
 PROJECT="${1:-unknown}"
-DEP_SRC=~/project/project_path/data/log/dep/src
-SILENT_DIR=~/project/project_path/data/log/dep/input/silent
+SILENT_DIR="$PTH_ROOT/data/log/dep/input/silent"
 mkdir -p "$SILENT_DIR"
 
 USER_SITE=$(python3 -m site --user-site 2>/dev/null)

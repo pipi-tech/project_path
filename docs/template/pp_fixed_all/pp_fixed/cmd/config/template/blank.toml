@@ -1,0 +1,53 @@
+# ── identity ──────────────────────────────────────────────
+[project]
+name        = ""
+version     = "0.1.0"
+description = ""
+state       = "prototype"
+author      = ""
+
+# ── type ──────────────────────────────────────────────────
+[type]
+domain      = ""
+subtype     = ""
+category    = ""
+
+# ── runtime ───────────────────────────────────────────────
+[runtime]
+env         = "dev"
+target      = "local"
+min_ram     = ""
+min_disk    = ""
+
+# ── dependencies ──────────────────────────────────────────
+[dependencies]
+python      = ""
+requires    = []
+dev         = []
+peer        = []
+
+# ── fingerprint ───────────────────────────────────────────
+[fingerprint]
+hash            = ""
+generated_at    = ""
+generated_by    = ""
+last_known_good = ""
+
+# ── snap ──────────────────────────────────────────────────
+[snap]
+name        = ""
+tier        = ""
+path        = ""
+created_at  = ""
+created_by  = ""
+
+# ── log domains ───────────────────────────────────────────
+[log]
+active = []
+
+# ── registry ──────────────────────────────────────────────
+[registry]
+project_id  = ""
+node        = ""
+locked_by   = ""
+lock_time   = ""

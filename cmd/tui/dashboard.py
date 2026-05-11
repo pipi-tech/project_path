@@ -1,12 +1,13 @@
 import sys
-sys.path.insert(0, "/home/maven/project/project_path/cmd/tui")
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from textual.app import App, ComposeResult
 from textual.widgets import Static, Label, DataTable
 from textual.containers import Horizontal, Vertical
 from textual.reactive import reactive
 from textual.binding import Binding
-from pathlib import Path
 
 from styles.fsf import CSS, FSF
 from panes.nav import NavPane
@@ -36,9 +37,11 @@ class Dashboard(App):
     context = reactive("root")
 
     def compose(self) -> ComposeResult:
+        node = os.uname().nodename
+        user = os.environ.get("USER", "?")
         yield Static(
             f"[bold {FSF['green']}]project_path[/]  "
-            f"[{FSF['dim']}]maven@pop-os[/]  "
+            f"[{FSF['dim']}]{user}@{node}[/]  "
             f"[{FSF['teal']}]09 F9 11 02 9D 74 E3 5B D8 41 56 C5 63 56 88 C0[/]",
             id="topbar"
         )

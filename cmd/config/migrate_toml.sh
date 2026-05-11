@@ -1,4 +1,11 @@
 #!/bin/bash
+# WHAT:  Creates or migrates project.toml from current pip state and registers the project
+# WIRES: Called by functions/config.sh (migrate) → writes project.toml → calls onboard_deps.sh → writes data/registry.conf
+# WHY:   Bootstraps project.toml for existing projects that don't have one yet
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
+
 TOML="${1:-$(pwd)/project.toml}"
 TS=$(date '+%Y-%m-%d_%H-%M-%S')
 NODE=$(hostname)
@@ -14,13 +21,13 @@ if [ -f "$TOML" ]; then
   ENV=$(grep "^env\|^venv" "$TOML" | head -1 | cut -d'=' -f2 | tr -d ' "')
   echo "migrating existing: $NAME"
 else
-  NAME=$(basename $(pwd))
+  NAME=$(basename "$(pwd)")
   TYPE="unknown"
   ENV=".venv"
   echo "no toml found — creating new for: $NAME"
 fi
 
-[ -z "$NAME" ] && NAME=$(basename $(pwd))
+[ -z "$NAME" ] && NAME=$(basename "$(pwd)")
 [ -z "$TYPE" ] && TYPE="unknown"
 [ -z "$ENV"  ] && ENV=".venv"
 
@@ -117,9 +124,9 @@ echo "uuid: $UUID"
 echo "hash: ${HASH:0:16}..."
 echo "packages: $(pip freeze 2>/dev/null | wc -l)"
 
-REG_CONF=~/project/project_path/data/registry.conf
+REG_CONF="$PTH_ROOT/data/registry.conf"
 if ! grep -q "^$NAME:" "$REG_CONF" 2>/dev/null; then
   echo "$NAME:$(pwd):$ENV:dev:$TYPE" >> "$REG_CONF"
   echo "registered: $NAME"
 fi
-bash ~/project/project_path/cmd/config/onboard_deps.sh "$(dirname $TOML)"
+bash "$PTH_ROOT/cmd/config/onboard_deps.sh" "$(dirname "$TOML")"

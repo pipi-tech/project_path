@@ -2,13 +2,23 @@
 __pycache__/
 *.pyc
 .venv/
+env/
 
-# Logs / runtime
-data/log/
-data/data/log/
+# Log input data (runtime state — append-only, not versioned)
+data/log/*/input/
+data/data/
 
-# Outputs
-output/
+# Master output files (generated)
+data/log/MasterLOGText/
+data/log/MasterSCRText/
+data/log/MasterTree/
 
-# Temp
-*.tmp
+# Dep snapshot artifacts
+data/log/dep/src/*.bak
+
+# Keep the log src scripts and empty input dirs
+!data/log/*/src/
+!data/log/*/input/.gitkeep
+
+# Backup files
+*.backup_*

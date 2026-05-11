@@ -1,10 +1,16 @@
 #!/bin/bash
+# WHAT:  Generates master log reference — all log domain input files combined into one audit file
+# WIRES: Called by functions/cli.sh (mlog) → reads data/log/*/input/ → writes data/log/MasterLOGText/master_log.txt
+# WHY:   Single-file audit of all log events across all domains, with sensitive tokens redacted
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
 
 LOCK=/tmp/master_log.lock
-OUT=~/project/project_path/data/log/MasterLOGText/master_log.txt
-LOG_BASE=~/project/project_path/data/log
+OUT="$PTH_ROOT/data/log/MasterLOGText/master_log.txt"
+LOG_BASE="$PTH_ROOT/data/log"
 
-mkdir -p ~/project/project_path/data/log/MasterLOGText
+mkdir -p "$PTH_ROOT/data/log/MasterLOGText"
 
 > "$OUT"
 
@@ -28,7 +34,7 @@ mkdir -p ~/project/project_path/data/log/MasterLOGText
     | parallel --jobs 4 --mutex "$LOCK" bash -c '
         DOMAIN={}
         NAME=$(basename "$DOMAIN")
-        OUT=~/project/project_path/data/log/MasterLOGText/master_log.txt
+        OUT='"$OUT"'
 
         echo "" >> "$OUT"
         echo "===================( $NAME )====================" >> "$OUT"

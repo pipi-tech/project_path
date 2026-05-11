@@ -1,9 +1,16 @@
 #!/bin/bash
+# WHAT:  Diffs before/after pip freeze snapshots and updates project.toml requires
+# WIRES: Called by functions/dep_wrappers.sh → reads data/log/dep/input/before+after → writes data/log/dep/input/diff/
+# WHY:   Produces an auditable record of exactly what each install added or removed
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
+
 PROJECT="$1"
 TS="$2"
-BEFORE=~/project/project_path/data/log/dep/input/before/$TS.txt
-AFTER=~/project/project_path/data/log/dep/input/after/$TS.txt
-DIR=~/project/project_path/data/log/dep/input/diff
+BEFORE="$PTH_ROOT/data/log/dep/input/before/$TS.txt"
+AFTER="$PTH_ROOT/data/log/dep/input/after/$TS.txt"
+DIR="$PTH_ROOT/data/log/dep/input/diff"
 TOML="$(pwd)/project.toml"
 mkdir -p "$DIR"
 

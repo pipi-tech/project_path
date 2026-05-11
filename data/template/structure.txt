@@ -1,5 +1,5 @@
 # project_path structure
-# generated: 2026-04-29 22:41:50
+# generated: 2026-05-04 20:38:48
 # node: pop-os
 
 /home/maven/project/project_path
@@ -65,124 +65,33 @@
 │   │   └── dashboard.py
 │   └── combine.sh
 ├── data
+│   ├── data
+│   │   └── log
+│   │       └── doc
+│   │           └── input
+│   │               ├── dep
+│   │               │   └── project_path_.txt
+│   │               ├── ref
+│   │               │   └── project_path_.txt
+│   │               ├── scaffold
+│   │               │   └── project_path_6607.txt
+│   │               └── session
+│   │                   ├── project_path_close_.txt
+│   │                   ├── project_path_open_2026-05-03_22-42-12.txt
+│   │                   └── project_path_open_6607.txt
 │   ├── log
 │   │   ├── builder
 │   │   │   ├── input
 │   │   │   │   ├── build_done
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── build_start
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── build_step
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── dep_install
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   └── drift
-│   │   │   │       ├── 2026-04-29_13-43-08.txt
-│   │   │   │       ├── 2026-04-29_14-08-26.txt
-│   │   │   │       ├── 2026-04-29_14-14-45.txt
-│   │   │   │       ├── 2026-04-29_14-47-49.txt
-│   │   │   │       ├── 2026-04-29_16-58-56.txt
-│   │   │   │       ├── 2026-04-29_17-07-10.txt
-│   │   │   │       ├── 2026-04-29_18-24-57.txt
-│   │   │   │       ├── 2026-04-29_18-26-42.txt
-│   │   │   │       ├── 2026-04-29_19-47-25.txt
-│   │   │   │       ├── 2026-04-29_19-48-12.txt
-│   │   │   │       ├── 2026-04-29_20-04-12.txt
-│   │   │   │       ├── 2026-04-29_20-19-54.txt
-│   │   │   │       ├── 2026-04-29_20-22-18.txt
-│   │   │   │       ├── 2026-04-29_20-30-19.txt
-│   │   │   │       ├── 2026-04-29_20-30-59.txt
-│   │   │   │       ├── 2026-04-29_20-31-18.txt
-│   │   │   │       ├── 2026-04-29_20-34-17.txt
-│   │   │   │       ├── 2026-04-29_20-46-31.txt
-│   │   │   │       ├── 2026-04-29_20-51-03.txt
-│   │   │   │       ├── 2026-04-29_20-53-03.txt
-│   │   │   │       ├── 2026-04-29_20-56-15.txt
-│   │   │   │       └── 2026-04-29_22-35-27.txt
+│   │   │   │       └── 2026-05-03_22-42-12.txt
 │   │   │   ├── output
 │   │   │   └── src
 │   │   │       ├── on_build_done.sh
@@ -205,111 +114,11 @@
 │   │   ├── dep
 │   │   │   ├── input
 │   │   │   │   ├── after
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-13.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-15-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-16.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-20-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-17.txt
-│   │   │   │   │   ├── 2026-04-29_14-24-35.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-55.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-16.txt
-│   │   │   │   │   ├── 2026-04-29_20-57-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-59-11.txt
-│   │   │   │   │   └── 2026-04-29_22-36-19.txt
 │   │   │   │   ├── before
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-13.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-15-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-16.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-20-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-17.txt
-│   │   │   │   │   ├── 2026-04-29_14-24-35.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-55.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-16.txt
-│   │   │   │   │   ├── 2026-04-29_20-57-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-59-11.txt
-│   │   │   │   │   └── 2026-04-29_22-36-19.txt
 │   │   │   │   ├── diff
-│   │   │   │   │   ├── 2026-04-29_14-09-13.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-15-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-16.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-20-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-17.txt
-│   │   │   │   │   ├── 2026-04-29_14-24-35.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-55.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-16.txt
-│   │   │   │   │   ├── 2026-04-29_20-57-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-59-11.txt
-│   │   │   │   │   └── 2026-04-29_22-36-19.txt
 │   │   │   │   ├── install
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-13.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-15-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-16.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-20-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-17.txt
-│   │   │   │   │   ├── 2026-04-29_14-24-35.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-03-37.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-55.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-16.txt
-│   │   │   │   │   ├── 2026-04-29_20-57-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-59-11.txt
-│   │   │   │   │   ├── 2026-04-29_22-35-27.txt
-│   │   │   │   │   └── 2026-04-29_22-36-19.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── managers
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-13.txt
-│   │   │   │   │   ├── 2026-04-29_14-09-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-15-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-16.txt
-│   │   │   │   │   ├── 2026-04-29_14-16-27.txt
-│   │   │   │   │   ├── 2026-04-29_14-20-36.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-22-17.txt
-│   │   │   │   │   ├── 2026-04-29_14-24-35.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   └── 2026-04-29_16-58-56.txt
 │   │   │   │   └── silent
 │   │   │   ├── output
 │   │   │   └── src
@@ -318,6 +127,19 @@
 │   │   │       ├── on_install.sh
 │   │   │       ├── snap_after.sh.bak
 │   │   │       └── snap_before.sh.bak
+│   │   ├── doc
+│   │   │   ├── input
+│   │   │   │   ├── dep
+│   │   │   │   ├── ref
+│   │   │   │   ├── scaffold
+│   │   │   │   └── session
+│   │   │   ├── output
+│   │   │   └── src
+│   │   │       ├── on_dep_watch.sh
+│   │   │       ├── on_ref_gen.sh
+│   │   │       ├── on_scaffold.sh
+│   │   │       ├── on_session_close.sh
+│   │   │       └── on_session_open.sh
 │   │   ├── main
 │   │   │   ├── input
 │   │   │   ├── output
@@ -331,75 +153,12 @@
 │   │   ├── registry
 │   │   │   ├── input
 │   │   │   │   ├── accessed
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── drift
 │   │   │   │   ├── registered
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   └── updated
-│   │   │   │       ├── 2026-04-29_13-43-08.txt
-│   │   │   │       ├── 2026-04-29_14-08-26.txt
-│   │   │   │       ├── 2026-04-29_14-14-45.txt
-│   │   │   │       ├── 2026-04-29_14-47-49.txt
-│   │   │   │       ├── 2026-04-29_16-58-56.txt
-│   │   │   │       ├── 2026-04-29_17-07-10.txt
-│   │   │   │       ├── 2026-04-29_18-24-57.txt
-│   │   │   │       ├── 2026-04-29_18-26-42.txt
-│   │   │   │       ├── 2026-04-29_19-47-25.txt
-│   │   │   │       ├── 2026-04-29_19-48-12.txt
-│   │   │   │       ├── 2026-04-29_20-04-12.txt
-│   │   │   │       ├── 2026-04-29_20-19-54.txt
-│   │   │   │       ├── 2026-04-29_20-22-18.txt
-│   │   │   │       ├── 2026-04-29_20-30-19.txt
-│   │   │   │       ├── 2026-04-29_20-30-59.txt
-│   │   │   │       ├── 2026-04-29_20-31-18.txt
-│   │   │   │       ├── 2026-04-29_20-34-17.txt
-│   │   │   │       ├── 2026-04-29_20-46-31.txt
-│   │   │   │       ├── 2026-04-29_20-51-03.txt
-│   │   │   │       ├── 2026-04-29_20-53-03.txt
-│   │   │   │       ├── 2026-04-29_20-56-15.txt
-│   │   │   │       └── 2026-04-29_22-35-27.txt
+│   │   │   │       └── 2026-05-03_22-42-12.txt
 │   │   │   ├── output
 │   │   │   └── src
 │   │   │       ├── on_access.sh
@@ -410,99 +169,14 @@
 │   │   ├── terminal
 │   │   │   ├── input
 │   │   │   │   ├── project
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── terminal
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   ├── when
-│   │   │   │   │   ├── 2026-04-29_13-43-08.txt
-│   │   │   │   │   ├── 2026-04-29_14-08-26.txt
-│   │   │   │   │   ├── 2026-04-29_14-14-45.txt
-│   │   │   │   │   ├── 2026-04-29_14-47-49.txt
-│   │   │   │   │   ├── 2026-04-29_16-58-56.txt
-│   │   │   │   │   ├── 2026-04-29_17-07-10.txt
-│   │   │   │   │   ├── 2026-04-29_18-24-57.txt
-│   │   │   │   │   ├── 2026-04-29_18-26-42.txt
-│   │   │   │   │   ├── 2026-04-29_19-47-25.txt
-│   │   │   │   │   ├── 2026-04-29_19-48-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-04-12.txt
-│   │   │   │   │   ├── 2026-04-29_20-19-54.txt
-│   │   │   │   │   ├── 2026-04-29_20-22-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-19.txt
-│   │   │   │   │   ├── 2026-04-29_20-30-59.txt
-│   │   │   │   │   ├── 2026-04-29_20-31-18.txt
-│   │   │   │   │   ├── 2026-04-29_20-34-17.txt
-│   │   │   │   │   ├── 2026-04-29_20-46-31.txt
-│   │   │   │   │   ├── 2026-04-29_20-51-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-53-03.txt
-│   │   │   │   │   ├── 2026-04-29_20-56-15.txt
-│   │   │   │   │   └── 2026-04-29_22-35-27.txt
+│   │   │   │   │   └── 2026-05-03_22-42-12.txt
 │   │   │   │   └── who
-│   │   │   │       ├── 2026-04-29_13-43-08.txt
-│   │   │   │       ├── 2026-04-29_14-08-26.txt
-│   │   │   │       ├── 2026-04-29_14-14-45.txt
-│   │   │   │       ├── 2026-04-29_14-47-49.txt
-│   │   │   │       ├── 2026-04-29_16-58-56.txt
-│   │   │   │       ├── 2026-04-29_17-07-10.txt
-│   │   │   │       ├── 2026-04-29_18-24-57.txt
-│   │   │   │       ├── 2026-04-29_18-26-42.txt
-│   │   │   │       ├── 2026-04-29_19-47-25.txt
-│   │   │   │       ├── 2026-04-29_19-48-12.txt
-│   │   │   │       ├── 2026-04-29_20-04-12.txt
-│   │   │   │       ├── 2026-04-29_20-19-54.txt
-│   │   │   │       ├── 2026-04-29_20-22-18.txt
-│   │   │   │       ├── 2026-04-29_20-30-19.txt
-│   │   │   │       ├── 2026-04-29_20-30-59.txt
-│   │   │   │       ├── 2026-04-29_20-31-18.txt
-│   │   │   │       ├── 2026-04-29_20-34-17.txt
-│   │   │   │       ├── 2026-04-29_20-46-31.txt
-│   │   │   │       ├── 2026-04-29_20-51-03.txt
-│   │   │   │       ├── 2026-04-29_20-53-03.txt
-│   │   │   │       ├── 2026-04-29_20-56-15.txt
-│   │   │   │       └── 2026-04-29_22-35-27.txt
+│   │   │   │       └── 2026-05-03_22-42-12.txt
 │   │   │   ├── output
-│   │   │   │   └── session.log
 │   │   │   └── src
 │   │   │       ├── project.sh
 │   │   │       ├── terminal.sh
@@ -518,6 +192,152 @@
 │   │   └── structure.txt
 │   ├── registry.conf
 │   └── registry.txt
+├── docs
+│   ├── arch
+│   │   └── DECISIONS.md
+│   ├── log
+│   │   └── session_2026-05-03_22-42-12.txt
+│   ├── ref
+│   │   └── SCRIPTS.md
+│   ├── runbooks
+│   │   └── HOW_TO.md
+│   ├── src
+│   │   └── README.md
+│   ├── template
+│   │   ├── arch
+│   │   │   └── DECISIONS.md
+│   │   ├── log
+│   │   ├── pp_fixed_all
+│   │   │   ├── pp_fixed
+│   │   │   │   ├── builder
+│   │   │   │   │   └── input
+│   │   │   │   │       └── test.toml
+│   │   │   │   ├── cmd
+│   │   │   │   │   ├── builder
+│   │   │   │   │   │   ├── build.sh
+│   │   │   │   │   │   ├── compare_deps.sh
+│   │   │   │   │   │   ├── drift.sh
+│   │   │   │   │   │   └── fingerprint.sh
+│   │   │   │   │   ├── cli
+│   │   │   │   │   │   ├── master_log.sh
+│   │   │   │   │   │   ├── master_src.sh
+│   │   │   │   │   │   └── watch_silent.sh
+│   │   │   │   │   ├── config
+│   │   │   │   │   │   ├── template
+│   │   │   │   │   │   │   └── blank.toml
+│   │   │   │   │   │   ├── add_dep.sh
+│   │   │   │   │   │   ├── classify_deps.sh
+│   │   │   │   │   │   ├── migrate_toml.sh
+│   │   │   │   │   │   ├── onboard_deps.sh
+│   │   │   │   │   │   ├── pkg_classes.conf
+│   │   │   │   │   │   ├── set_log_domains.sh
+│   │   │   │   │   │   └── type_registry.conf
+│   │   │   │   │   ├── dep
+│   │   │   │   │   │   ├── diff_deps.sh
+│   │   │   │   │   │   ├── snap_after.sh
+│   │   │   │   │   │   └── snap_before.sh
+│   │   │   │   │   ├── tui
+│   │   │   │   │   │   ├── modals
+│   │   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   │   └── new_project.py
+│   │   │   │   │   │   ├── panes
+│   │   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   │   ├── keybinds.py
+│   │   │   │   │   │   │   ├── logs.py
+│   │   │   │   │   │   │   ├── nav.py
+│   │   │   │   │   │   │   ├── projects.py
+│   │   │   │   │   │   │   ├── snaps.py
+│   │   │   │   │   │   │   └── toml_view.py
+│   │   │   │   │   │   ├── styles
+│   │   │   │   │   │   │   └── fsf.py
+│   │   │   │   │   │   └── dashboard.py
+│   │   │   │   │   └── combine.sh
+│   │   │   │   ├── data
+│   │   │   │   │   ├── template
+│   │   │   │   │   │   ├── scaffold.sh
+│   │   │   │   │   │   └── structure.txt
+│   │   │   │   │   ├── registry.conf
+│   │   │   │   │   └── registry.txt
+│   │   │   │   ├── docs
+│   │   │   │   │   ├── arch
+│   │   │   │   │   │   └── DECISIONS.md
+│   │   │   │   │   ├── log
+│   │   │   │   │   ├── ref
+│   │   │   │   │   │   └── SCRIPTS.md
+│   │   │   │   │   ├── runbooks
+│   │   │   │   │   │   └── HOW_TO.md
+│   │   │   │   │   ├── src
+│   │   │   │   │   │   └── README.md
+│   │   │   │   │   ├── template
+│   │   │   │   │   │   ├── arch
+│   │   │   │   │   │   │   └── DECISIONS.md
+│   │   │   │   │   │   └── runbooks
+│   │   │   │   │   │       └── HOW_TO.md
+│   │   │   │   │   ├── PHILOSOPHY.md
+│   │   │   │   │   ├── scaffold.sh
+│   │   │   │   │   └── SECURITY.md
+│   │   │   │   ├── engines
+│   │   │   │   │   ├── builder
+│   │   │   │   │   │   ├── input
+│   │   │   │   │   │   │   └── test.toml
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       ├── build.sh
+│   │   │   │   │   │       ├── compare_deps.sh
+│   │   │   │   │   │       ├── drift.sh
+│   │   │   │   │   │       ├── gen_fingerprint.sh
+│   │   │   │   │   │       ├── install_deps.sh
+│   │   │   │   │   │       ├── read_toml.sh
+│   │   │   │   │   │       ├── register.sh
+│   │   │   │   │   │       └── stamp_folders.sh
+│   │   │   │   │   ├── doc_worker
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       ├── gen_ref.sh
+│   │   │   │   │   │       ├── main.sh
+│   │   │   │   │   │       ├── session_close.sh
+│   │   │   │   │   │       ├── session_open.sh
+│   │   │   │   │   │       └── watch_deps.sh
+│   │   │   │   │   ├── drift_engine
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       └── main.sh
+│   │   │   │   │   ├── log_engine
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       └── main.sh
+│   │   │   │   │   ├── network
+│   │   │   │   │   │   └── src
+│   │   │   │   │   │       └── main.sh
+│   │   │   │   │   └── state_engine
+│   │   │   │   │       └── src
+│   │   │   │   │           └── main.sh
+│   │   │   │   ├── functions
+│   │   │   │   │   ├── builder.sh
+│   │   │   │   │   ├── cli.sh
+│   │   │   │   │   ├── config.sh
+│   │   │   │   │   ├── dep_wrappers.sh
+│   │   │   │   │   ├── doc.sh
+│   │   │   │   │   ├── logs.sh
+│   │   │   │   │   ├── new.sh
+│   │   │   │   │   ├── proj.sh
+│   │   │   │   │   ├── registry.sh
+│   │   │   │   │   ├── template.sh
+│   │   │   │   │   └── tui.sh
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── test_log_write.sh
+│   │   │   │   │   ├── test_no_duplicate_builder.sh
+│   │   │   │   │   ├── test_no_hardcoded_paths.sh
+│   │   │   │   │   ├── test_portability.sh
+│   │   │   │   │   └── test_scaffold.sh
+│   │   │   │   ├── cmd_list 
+│   │   │   │   ├── functions.sh
+│   │   │   │   ├── overlay_engine.sh
+│   │   │   │   ├── project.toml
+│   │   │   │   ├── README.md
+│   │   │   │   ├── scaffold.sh
+│   │   │   │   └── v1Goal.txt
+│   │   │   └── pp_fixed_all.zip
+│   │   ├── ref
+│   │   └── runbooks
+│   │       └── HOW_TO.md
+│   └── scaffold.sh
 ├── engines
 │   ├── builder
 │   │   ├── input
@@ -532,6 +352,13 @@
 │   │       ├── read_toml.sh
 │   │       ├── register.sh
 │   │       └── stamp_folders.sh
+│   ├── doc_worker
+│   │   └── src
+│   │       ├── gen_ref.sh
+│   │       ├── main.sh
+│   │       ├── session_close.sh
+│   │       ├── session_open.sh
+│   │       └── watch_deps.sh
 │   ├── drift_engine
 │   │   ├── input
 │   │   ├── output
@@ -557,6 +384,7 @@
 │   ├── cli.sh
 │   ├── config.sh
 │   ├── dep_wrappers.sh
+│   ├── doc.sh
 │   ├── logs.sh
 │   ├── new.sh
 │   ├── proj.sh
@@ -570,6 +398,7 @@
 │   └── state_sim
 ├── cmd_list 
 ├── functions.sh
+├── overlay_engine.sh
 ├── project.toml
 ├── scaffold.sh
 └── v1Goal.txt
@@ -620,6 +449,11 @@
 /home/maven/project/project_path/data/log/builder/src/on_dep_install.sh
 /home/maven/project/project_path/data/log/builder/src/on_drift.sh
 /home/maven/project/project_path/data/log/dep/src/on_install.sh
+/home/maven/project/project_path/data/log/doc/src/on_dep_watch.sh
+/home/maven/project/project_path/data/log/doc/src/on_ref_gen.sh
+/home/maven/project/project_path/data/log/doc/src/on_scaffold.sh
+/home/maven/project/project_path/data/log/doc/src/on_session_close.sh
+/home/maven/project/project_path/data/log/doc/src/on_session_open.sh
 /home/maven/project/project_path/data/log/logScr.sh
 /home/maven/project/project_path/data/log/registry/src/on_access.sh
 /home/maven/project/project_path/data/log/registry/src/on_drift.sh
@@ -631,6 +465,79 @@
 /home/maven/project/project_path/data/log/terminal/src/who.sh
 /home/maven/project/project_path/data/registry.conf
 /home/maven/project/project_path/data/template/scaffold.sh
+/home/maven/project/project_path/docs/scaffold.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/builder/input/test.toml
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/builder/build.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/builder/compare_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/builder/drift.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/builder/fingerprint.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/cli/master_log.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/cli/master_src.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/cli/watch_silent.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/combine.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/add_dep.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/classify_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/migrate_toml.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/onboard_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/pkg_classes.conf
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/set_log_domains.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/template/blank.toml
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/config/type_registry.conf
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/dep/diff_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/dep/snap_after.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/dep/snap_before.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/dashboard.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/modals/__init__.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/modals/new_project.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/__init__.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/keybinds.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/logs.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/nav.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/projects.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/snaps.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/panes/toml_view.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/cmd/tui/styles/fsf.py
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/data/registry.conf
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/data/template/scaffold.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/docs/scaffold.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/input/test.toml
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/build.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/compare_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/drift.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/gen_fingerprint.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/install_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/read_toml.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/register.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/builder/src/stamp_folders.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/doc_worker/src/gen_ref.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/doc_worker/src/main.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/doc_worker/src/session_close.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/doc_worker/src/session_open.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/doc_worker/src/watch_deps.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/drift_engine/src/main.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/log_engine/src/main.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/network/src/main.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/engines/state_engine/src/main.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/builder.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/cli.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/config.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/dep_wrappers.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/doc.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/logs.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/new.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/proj.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/registry.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/template.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/functions/tui.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/overlay_engine.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/project.toml
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/scaffold.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/tests/test_log_write.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/tests/test_no_duplicate_builder.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/tests/test_no_hardcoded_paths.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/tests/test_portability.sh
+/home/maven/project/project_path/docs/template/pp_fixed_all/pp_fixed/tests/test_scaffold.sh
 /home/maven/project/project_path/engines/builder/input/test.toml
 /home/maven/project/project_path/engines/builder/src/build.sh
 /home/maven/project/project_path/engines/builder/src/compare_deps.sh
@@ -640,6 +547,11 @@
 /home/maven/project/project_path/engines/builder/src/read_toml.sh
 /home/maven/project/project_path/engines/builder/src/register.sh
 /home/maven/project/project_path/engines/builder/src/stamp_folders.sh
+/home/maven/project/project_path/engines/doc_worker/src/gen_ref.sh
+/home/maven/project/project_path/engines/doc_worker/src/main.sh
+/home/maven/project/project_path/engines/doc_worker/src/session_close.sh
+/home/maven/project/project_path/engines/doc_worker/src/session_open.sh
+/home/maven/project/project_path/engines/doc_worker/src/watch_deps.sh
 /home/maven/project/project_path/engines/drift_engine/src/main.sh
 /home/maven/project/project_path/engines/log_engine/src/main.sh
 /home/maven/project/project_path/engines/network/src/main.sh
@@ -648,6 +560,7 @@
 /home/maven/project/project_path/functions/cli.sh
 /home/maven/project/project_path/functions/config.sh
 /home/maven/project/project_path/functions/dep_wrappers.sh
+/home/maven/project/project_path/functions/doc.sh
 /home/maven/project/project_path/functions/logs.sh
 /home/maven/project/project_path/functions/new.sh
 /home/maven/project/project_path/functions/proj.sh
@@ -655,5 +568,6 @@
 /home/maven/project/project_path/functions.sh
 /home/maven/project/project_path/functions/template.sh
 /home/maven/project/project_path/functions/tui.sh
+/home/maven/project/project_path/overlay_engine.sh
 /home/maven/project/project_path/project.toml
 /home/maven/project/project_path/scaffold.sh

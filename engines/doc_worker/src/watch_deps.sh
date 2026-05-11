@@ -4,8 +4,8 @@ PROJECT="$1"; PROJECT_ROOT="$2"; DEP="$3"; MANAGER="$4"; TS="$5"
 [ -z "$PROJECT_ROOT" ] && echo "no project root" && exit 1
 [ -z "$DEP" ]          && echo "no dep" && exit 1
 SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PP_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
-LOG_SRC="$PP_ROOT/data/log/doc/src"
+PTH_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
+LOG_SRC="$PTH_ROOT/data/log/doc/src"
 CHANGELOG="$PROJECT_ROOT/docs/log/changelog.txt"
 mkdir -p "$(dirname "$CHANGELOG")"
 if [ ! -f "$CHANGELOG" ]; then

@@ -1,0 +1,10 @@
+must have:
+session hash       ✗ not working yet
+clearLogs all      ✗ partial
+container reg      ✗ not built
+enter (remote)     ✗ not built
+
+nice to have:
+state engine       ✗ not built
+tests/             ✗ not built
+snap engine        ✗ not built

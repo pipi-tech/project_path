@@ -1,11 +1,14 @@
 #!/bin/bash
+# WHAT:  CLI utility commands — msrc, mlog, aptlist
+# WIRES: Sourced by functions.sh → calls $PTH_ROOT/cmd/cli/
+# WHY:   Interface layer for master log/src generation and package listing
 
 msrc() {
-  bash ~/project/project_path/cmd/cli/master_src.sh
+  bash "$PTH_ROOT/cmd/cli/master_src.sh"
 }
 
 mlog() {
-  bash ~/project/project_path/cmd/cli/master_log.sh
+  bash "$PTH_ROOT/cmd/cli/master_log.sh"
 }
 
 aptlist() {

@@ -3,8 +3,8 @@ PROJECT="$1"; PROJECT_ROOT="$2"; TS="$3"
 [ -z "$PROJECT" ]      && echo "no project" && exit 1
 [ -z "$PROJECT_ROOT" ] && echo "no project root" && exit 1
 SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PP_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
-LOG_SRC="$PP_ROOT/data/log/doc/src"
+PTH_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
+LOG_SRC="$PTH_ROOT/data/log/doc/src"
 SESSION_FILE="$PROJECT_ROOT/docs/log/session_${TS}.txt"
 mkdir -p "$(dirname "$SESSION_FILE")"
 TTY_VAL=$(tty 2>/dev/null || echo "no-tty")

@@ -1,10 +1,13 @@
 #!/bin/bash
-REG_CONF=~/project/project_path/data/registry.conf
-REG_LOG=~/project/project_path/data/registry.txt
+# WHAT:  Registry and session query commands — reg, session, gitpush
+# WIRES: Sourced by functions.sh → reads data/registry.conf and data/registry.txt → reads data/log/terminal/
+# WHY:   Interface layer for registry queries and session state — no writes, read-only audit commands
 
 reg() {
   local cmd="$1"
   local name="$2"
+  local REG_CONF="$PTH_ROOT/data/registry.conf"
+  local REG_LOG="$PTH_ROOT/data/registry.txt"
   case "$cmd" in
     list)
       grep -v "^#" "$REG_CONF" | while IFS=":" read -r n root env environment type; do
@@ -32,6 +35,7 @@ reg() {
 session() {
   local cmd="${1:-show}"
   local HASH_FILE="/tmp/pp_session_$$.hash"
+  local LOG_BASE="$PTH_ROOT/data/log"
 
   case "$cmd" in
     show)
@@ -52,18 +56,18 @@ session() {
       ;;
     history)
       echo "=== session history ==="
-      find ~/project/project_path/data/log/terminal/input/who \
-        -name "*.txt" | sort -r | head -20 \
+      find "$LOG_BASE/terminal/input/who" \
+        -name "*.txt" 2>/dev/null | sort -r | head -20 \
       | xargs -I{} bash -c 'echo "--- {} ---" && cat "{}"'
       ;;
     find)
       [ -z "$2" ] && echo "usage: session find <hash>" && return 1
       echo "=== terminal ==="
-      grep -r "$2" ~/project/project_path/data/log/terminal/input/ 2>/dev/null
+      grep -r "$2" "$LOG_BASE/terminal/input/" 2>/dev/null
       echo "=== dep ==="
-      grep -r "$2" ~/project/project_path/data/log/dep/input/ 2>/dev/null
+      grep -r "$2" "$LOG_BASE/dep/input/" 2>/dev/null
       echo "=== registry ==="
-      grep -r "$2" ~/project/project_path/data/log/registry/input/ 2>/dev/null
+      grep -r "$2" "$LOG_BASE/registry/input/" 2>/dev/null
       ;;
     active)
       echo "=== active sessions ==="
@@ -91,4 +95,13 @@ session() {
       echo "usage: session [show|history|find <hash>|active|clean]"
       ;;
   esac
+}
+
+gitpush() {
+  local msg="${1:-auto: session close $(date '+%Y-%m-%d %H:%M')}"
+  local branch
+  branch=$(git branch --show-current 2>/dev/null || echo "main")
+  git add . 2>/dev/null
+  git commit -m "$msg" 2>/dev/null
+  git push origin "$branch" 2>/dev/null && echo "pushed: $branch" || echo "push failed or nothing to push"
 }

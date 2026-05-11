@@ -1,7 +1,14 @@
 #!/bin/bash
+# WHAT:  Captures pip freeze snapshot after an install
+# WIRES: Called by functions/dep_wrappers.sh → writes to data/log/dep/input/after/
+# WHY:   Before/after snapshots enable diff_deps to detect exactly what changed
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
+
 PROJECT="$1"
 TS="$2"
-DIR=~/project/project_path/data/log/dep/input/after
+DIR="$PTH_ROOT/data/log/dep/input/after"
 mkdir -p "$DIR"
 
 VENV_PIP=$(which pip)

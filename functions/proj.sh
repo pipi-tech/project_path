@@ -1,7 +1,11 @@
 #!/bin/bash
-PROJECT_PATHS=(~/project)
-REG_CONF=~/project/project_path/data/registry.conf
-DOC_WORKER=~/project/project_path/engines/doc_worker/src/main.sh
+# WHAT:  Project entry and session management — proj, reg, session commands
+# WIRES: Sourced by functions.sh → reads data/registry.conf → calls engines/doc_worker/src/main.sh
+# WHY:   Core navigation layer — entering a project activates venv and opens a tracked session
+
+PROJECT_PATHS=("$HOME/project")
+REG_CONF="$PTH_ROOT/data/registry.conf"
+DOC_WORKER="$PTH_ROOT/engines/doc_worker/src/main.sh"
 SESSION_STORE=/tmp/pp_doc_sessions
 mkdir -p "$SESSION_STORE"
 
@@ -11,7 +15,7 @@ _reg_lookup() {
 }
 
 _proj_exists() {
-  [ -n "$(_reg_lookup $1)" ] && return 0
+  [ -n "$(_reg_lookup "$1")" ] && return 0
   for base in "${PROJECT_PATHS[@]}"; do
     [ -d "$base/$1" ] && return 0
   done
@@ -29,19 +33,19 @@ _proj_core() {
     else
       for base in "${PROJECT_PATHS[@]}"; do
         [ -d "$base" ] && for d in "$base"/*/; do
-          [ -d "$d" ] && echo "  $(basename $d)  ($base)"
+          [ -d "$d" ] && echo "  $(basename "$d")  ($base)"
         done
       done
     fi
     return 0
   fi
 
-  local entry=$(_reg_lookup "$name")
-  local root env
+  local entry root env
+  entry=$(_reg_lookup "$name")
 
   if [ -n "$entry" ]; then
     root=$(echo "$entry" | cut -d: -f2 | sed "s|~|$HOME|")
-    env=$(echo "$entry" | cut -d: -f3)
+    env=$(echo "$entry"  | cut -d: -f3)
   else
     for base in "${PROJECT_PATHS[@]}"; do
       [ -d "$base/$name" ] && root="$base/$name" && break
@@ -52,15 +56,16 @@ _proj_core() {
 
   local prev="$SESSION_STORE/current"
   if [ -f "$prev" ]; then
-    local prev_data=$(cat "$prev")
-    local prev_proj=$(echo "$prev_data" | cut -d: -f1)
-    local prev_ts=$(echo "$prev_data" | cut -d: -f2)
-    local prev_root=$(echo "$prev_data" | cut -d: -f3-)
+    local prev_data prev_proj prev_ts prev_root
+    prev_data=$(cat "$prev")
+    prev_proj=$(echo "$prev_data" | cut -d: -f1)
+    prev_ts=$(echo "$prev_data"   | cut -d: -f2)
+    prev_root=$(echo "$prev_data" | cut -d: -f3-)
     bash "$DOC_WORKER" "$prev_proj" "$prev_root" session_close "$prev_ts" 2>/dev/null
     rm -f "$prev"
   fi
 
-  cd "$root"
+  cd "$root" || return 1
 
   if [ "$env" != "none" ] && [ -f "$root/$env/bin/activate" ]; then
     source "$root/$env/bin/activate"
@@ -78,7 +83,8 @@ _proj_core() {
   echo "---"
   ls
 
-  local TS=$(date '+%Y-%m-%d_%H-%M-%S')
+  local TS
+  TS=$(date '+%Y-%m-%d_%H-%M-%S')
   bash "$DOC_WORKER" "$name" "$root" session_open 2>/dev/null
   echo "$name:$TS:$root" > "$prev"
 }
@@ -86,6 +92,6 @@ _proj_core() {
 proj() {
   if [ -z "$1" ]; then _proj_core; return 0; fi
   if ! _proj_exists "$1"; then echo "Project '$1' not found." && return 1; fi
-  bash ~/project/project_path/data/log/logScr.sh "$1" "$$"
+  bash "$PTH_ROOT/data/log/logScr.sh" "$1" "$$" 2>/dev/null || true
   _proj_core "$1"
 }

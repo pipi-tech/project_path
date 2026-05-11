@@ -1,17 +1,18 @@
+import os
+from pathlib import Path
 from textual.app import ComposeResult
 from textual.screen import ModalScreen
 from textual.widgets import Static, Label, Input
 from textual.containers import Vertical, ScrollableContainer
 from textual.reactive import reactive
-from pathlib import Path
-import subprocess, os
+import subprocess
 
-BASE     = Path.home() / "project/project_path"
-REG_CONF = BASE / "data/registry.conf"
-TYPE_REG = BASE / "cmd/config/type_registry.conf"
-BUILDER  = BASE / "builder/src/build.sh"
-TEMPLATE = BASE / "cmd/config/template/blank.toml"
-INPUT    = BASE / "builder/input/test.toml"
+_PTH_ROOT = Path(os.environ.get("PTH_ROOT", Path(__file__).parent.parent.parent.parent))
+REG_CONF = _PTH_ROOT / "data/registry.conf"
+TYPE_REG = _PTH_ROOT / "cmd/config/type_registry.conf"
+BUILDER  = _PTH_ROOT / "engines/builder/src/build.sh"
+TEMPLATE = _PTH_ROOT / "cmd/config/template/blank.toml"
+INPUT    = _PTH_ROOT / "engines/builder/input/test.toml"
 
 PROJECT_PATHS = [
     str(Path.home() / "project"),
@@ -221,8 +222,8 @@ class NewProjectWizard(ModalScreen):
             self.render_step()
 
     def _run_build(self):
+        import shutil
         a = self.answers
-        import shutil, tempfile
 
         shutil.copy(str(TEMPLATE), str(INPUT))
 
@@ -254,6 +255,7 @@ class NewProjectWizard(ModalScreen):
 
         save_path = a.get("save_path", PROJECT_PATHS[0])
         os.environ["PROJECT_SAVE_PATH"] = save_path
+        os.environ["PTH_ROOT"] = str(_PTH_ROOT)
 
         subprocess.Popen(
             ["bash", str(BUILDER), str(INPUT)],

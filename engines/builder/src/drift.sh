@@ -1,6 +1,13 @@
 #!/bin/bash
+# WHAT:  Drift detection — compares stored fingerprint hash to current pip freeze hash
+# WIRES: Called by engines/builder/src/build.sh → reads data/registry.conf → calls data/log/registry/src/on_drift.sh
+# WHY:   Detects environment drift so builds can flag when installed state diverges from recorded state
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
+
 [ -z "$PROJECT_NAME" ] && echo "no project name" && exit 1
-REG_CONF=~/project/project_path/data/registry.conf
+REG_CONF="$PTH_ROOT/data/registry.conf"
 TS=$(date '+%Y-%m-%d_%H-%M-%S')
 STORED_HASH=$(grep -i "^$PROJECT_NAME:" "$REG_CONF" 2>/dev/null | cut -d: -f6)
 CURRENT_HASH=$(pip freeze 2>/dev/null | sha256sum | cut -d' ' -f1)
@@ -12,7 +19,7 @@ if [ "$STORED_HASH" != "$CURRENT_HASH" ]; then
   echo "  ⚠ drift detected"
   echo "  stored:  $STORED_HASH"
   echo "  current: $CURRENT_HASH"
-  bash ~/project/project_path/data/log/registry/src/on_drift.sh \
+  bash "$PTH_ROOT/data/log/registry/src/on_drift.sh" \
     "$PROJECT_NAME" "$STORED_HASH" "$CURRENT_HASH" "$TS"
 else
   echo "  ✓ no drift"

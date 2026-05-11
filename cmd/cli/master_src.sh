@@ -1,11 +1,17 @@
 #!/bin/bash
+# WHAT:  Generates master source reference — tree + all src/*.sh and *.py across all registered projects
+# WIRES: Called by functions/cli.sh (msrc) → reads data/registry.conf → writes data/log/MasterSCRText/master_src.txt
+# WHY:   Single-file audit of all source code across all projects, with sensitive tokens redacted
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
 
 LOCK=/tmp/master_src.lock
-OUT=~/project/project_path/data/log/MasterSCRText/master_src.txt
-REG=~/project/project_path/data/registry.conf
-BASE=~/project/project_path
+OUT="$PTH_ROOT/data/log/MasterSCRText/master_src.txt"
+REG="$PTH_ROOT/data/registry.conf"
+BASE="$PTH_ROOT"
 
-mkdir -p ~/project/project_path/data/log/MasterSCRText
+mkdir -p "$PTH_ROOT/data/log/MasterSCRText"
 
 > "$OUT"
 
@@ -36,7 +42,7 @@ mkdir -p ~/project/project_path/data/log/MasterSCRText
     | parallel --jobs 4 --mutex "$LOCK" bash -c '
         SRC_DIR=$(echo {} | cut -d" " -f2)
         PROJECT=$(echo "$SRC_DIR" | rev | cut -d/ -f2 | rev)
-        OUT=~/project/project_path/data/log/MasterSCRText/master_src.txt
+        OUT='"$OUT"'
 
         echo "" >> "$OUT"
         echo "===================( $PROJECT/src )====================" >> "$OUT"

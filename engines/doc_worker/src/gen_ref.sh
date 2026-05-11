@@ -1,10 +1,20 @@
+@doc
+@usage
+@input
+@output
+@domain
+@state
+@tier
+
+
+
 #!/bin/bash
 PROJECT="$1"; PROJECT_ROOT="$2"; TS="$3"
 [ -z "$PROJECT" ]      && echo "no project" && exit 1
 [ -z "$PROJECT_ROOT" ] && echo "no project root" && exit 1
 SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PP_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
-LOG_SRC="$PP_ROOT/data/log/doc/src"
+PTH_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
+LOG_SRC="$PTH_ROOT/data/log/doc/src"
 SRC_DIR="$PROJECT_ROOT/src"
 REF_DIR="$PROJECT_ROOT/docs/ref"
 REF_FILE="$REF_DIR/SCRIPTS.md"

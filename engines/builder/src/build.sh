@@ -1,12 +1,16 @@
 #!/bin/bash
+# WHAT:  Full build pipeline — reads toml, stamps folders, installs deps, fingerprints, registers, logs each step
+# WIRES: Called by cmd/builder/build.sh → calls read_toml, stamp_folders, install_deps, gen_fingerprint, compare_deps, drift, register (all in this dir)
+# WHY:   Execution layer — this is where build actually runs; cmd/ is just the interface that calls here
+
 TOML="$1"
 [ -z "$TOML" ] && echo "usage: build.sh <path/to/project.toml>" && exit 1
 
-${EDITOR:-nano} "$TOML"
-
-SRC=~/project/project_path/builder/src
-CMD_CFG=~/project/project_path/cmd/config
-LOG=~/project/project_path/data/log/builder/src
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
+SRC="$SELF_DIR"
+CMD_CFG="$PTH_ROOT/cmd/config"
+LOG="$PTH_ROOT/data/log/builder/src"
 TS=$(date '+%Y-%m-%d_%H-%M-%S')
 
 echo "--- reading toml"
@@ -43,7 +47,7 @@ bash "$SRC/register.sh" "$TOML"
 bash "$LOG/on_build_step.sh" "$PROJECT_NAME" "$TS" "register" "done"
 
 echo "--- moving toml to project root"
-PROJECT_ROOT=~/project/$PROJECT_NAME
+PROJECT_ROOT="${PROJECT_SAVE_PATH:-$HOME/project}/$PROJECT_NAME"
 cp "$TOML" "$PROJECT_ROOT/project.toml"
 echo "toml saved: $PROJECT_ROOT/project.toml"
 
@@ -51,7 +55,7 @@ bash "$LOG/on_build_done.sh" "$PROJECT_NAME" "$TS" "$FINGERPRINT_HASH" ""
 
 echo "--- resetting template"
 cp "$CMD_CFG/template/blank.toml" \
-   ~/project/project_path/builder/input/test.toml
+   "$PTH_ROOT/engines/builder/input/test.toml"
 echo "template reset"
 
 echo "--- done: $PROJECT_NAME"

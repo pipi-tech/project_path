@@ -1,1 +1,1 @@
-source ~/project/project_path/functions.sh
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/functions.sh"

@@ -1,0 +1,3 @@
+# registry history log — append-only
+# format: timestamp :: user :: project :: type :: env :: fingerprint_hash
+# auto-maintained by engines/builder/src/register.sh

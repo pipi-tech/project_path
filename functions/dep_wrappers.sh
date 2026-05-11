@@ -1,14 +1,20 @@
 #!/bin/bash
-DEP_SRC=~/project/project_path/data/log/dep/src
-DEP_CMD=~/project/project_path/cmd/dep
+# WHAT:  Package manager wrappers — intercept pip/uv/conda/npm/cargo installs to log them
+# WIRES: Sourced by functions.sh → wraps system commands → calls $PTH_ROOT/cmd/dep/ and data/log/dep/src/
+# WHY:   Every install must be logged before and after so drift detection and dep history work
+
+DEP_SRC="$PTH_ROOT/data/log/dep/src"
+DEP_CMD="$PTH_ROOT/cmd/dep"
 PARENT_PID=$$
 
 _dep_wrap() {
   local MANAGER="$1"
   local PACKAGE="$2"
   local CMD="$3"
-  local PROJECT=$(basename $(pwd))
-  local TS=$(date '+%Y-%m-%d_%H-%M-%S')
+  local PROJECT
+  PROJECT=$(basename "$(pwd)")
+  local TS
+  TS=$(date '+%Y-%m-%d_%H-%M-%S')
 
   bash "$DEP_CMD/snap_before.sh" "$PROJECT" "$TS"
   bash "$DEP_SRC/on_install.sh"  "$PROJECT" "$TS" "$MANAGER" "$PACKAGE" "$PARENT_PID"

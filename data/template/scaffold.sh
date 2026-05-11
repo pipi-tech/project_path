@@ -1,29 +1,31 @@
 #!/bin/bash
-# scaffold.sh — dynamic project_path template
-# usage: bash scaffold.sh           → update structure snapshot
-#        bash scaffold.sh <target>  → stamp structure into target dir
+# WHAT:  Template manager — updates structure snapshot or stamps a target directory
+# WIRES: Called by functions/template.sh (tpl update / tpl stamp) → reads/writes data/template/structure.txt
+# WHY:   Template system — captures project_path structure and clones it to new locations
 
-BASE=~/project/project_path
-TEMPLATE_DIR="$BASE/data/template"
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
+BASE="$PTH_ROOT"
+TEMPLATE_DIR="$SELF_DIR"
 STRUCTURE="$TEMPLATE_DIR/structure.txt"
 IGNORE="__pycache__|.venv|env/|.git|node_modules|*.pyc"
 
 update_snapshot() {
   echo "updating structure snapshot..."
-  echo "# project_path structure" > "$STRUCTURE"
-  echo "# generated: $(date '+%Y-%m-%d %H:%M:%S')" >> "$STRUCTURE"
-  echo "# node: $(hostname)" >> "$STRUCTURE"
-  echo "" >> "$STRUCTURE"
+  echo "# project_path structure"                     > "$STRUCTURE"
+  echo "# generated: $(date '+%Y-%m-%d %H:%M:%S')"  >> "$STRUCTURE"
+  echo "# node: <NODE>"                               >> "$STRUCTURE"
+  echo ""                                             >> "$STRUCTURE"
   tree "$BASE" \
     -I "$IGNORE" \
     --noreport \
     --dirsfirst \
     2>/dev/null >> "$STRUCTURE"
-  echo "" >> "$STRUCTURE"
-  echo "# src files" >> "$STRUCTURE"
+  echo ""                                             >> "$STRUCTURE"
+  echo "# src files"                                  >> "$STRUCTURE"
   find "$BASE" \( -path "*/.venv" -o -path "*/__pycache__" \) -prune \
-    -o -name "*.sh" -print \
-    -o -name "*.py" -print \
+    -o -name "*.sh"   -print \
+    -o -name "*.py"   -print \
     -o -name "*.toml" -print \
     -o -name "*.conf" -print \
     2>/dev/null | sort >> "$STRUCTURE"
@@ -31,7 +33,7 @@ update_snapshot() {
 }
 
 stamp_target() {
-  TARGET="$1"
+  local TARGET="$1"
   [ -z "$TARGET" ] && echo "usage: scaffold.sh <target>" && exit 1
   echo "stamping: $TARGET"
 
@@ -46,6 +48,7 @@ stamp_target() {
     ! -path "*/.venv/*" \
     ! -path "*/__pycache__/*" \
     | while read -r f; do
+        local rel dir
         rel=$(echo "$f" | sed "s|$BASE/||")
         dir=$(dirname "$TARGET/$rel")
         mkdir -p "$dir"

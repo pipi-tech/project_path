@@ -4,8 +4,8 @@ PROJECT="$1"; PROJECT_ROOT="$2"; START_TS="$3"; END_TS="$4"
 [ -z "$PROJECT_ROOT" ] && echo "no project root" && exit 1
 [ -z "$START_TS" ]     && echo "no start ts" && exit 1
 SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PP_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
-LOG_SRC="$PP_ROOT/data/log/doc/src"
+PTH_ROOT="$(cd "$SELF_DIR/../../.." && pwd)"
+LOG_SRC="$PTH_ROOT/data/log/doc/src"
 SESSION_FILE="$PROJECT_ROOT/docs/log/session_${START_TS}.txt"
 END_TS="${END_TS:-$(date '+%Y-%m-%d_%H-%M-%S')}"
 if [ ! -f "$SESSION_FILE" ]; then

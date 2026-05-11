@@ -1,6 +1,13 @@
 #!/bin/bash
+# WHAT:  Classifies project dependencies into categories (nlp/ml/http/cli/etc) and writes toml sections
+# WIRES: Called by functions/config.sh (classify) → reads pkg_classes.conf → writes to project.toml → logs to data/log/dep/
+# WHY:   Structured dep classification enables the build pipeline to group and track deps by purpose
+
+SELF_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PTH_ROOT="$(cd "$SELF_DIR/../.." && pwd)"
+
 TOML="${1:-$(pwd)/project.toml}"
-CLASSES=~/project/project_path/cmd/config/pkg_classes.conf
+CLASSES="$PTH_ROOT/cmd/config/pkg_classes.conf"
 MANAGER="${2:-pip}"
 [ ! -f "$TOML" ] && echo "no project.toml found" && exit 1
 [ ! -f "$CLASSES" ] && echo "no pkg_classes.conf found" && exit 1
@@ -23,7 +30,7 @@ get_manager_packages() {
     cargo) grep "^cargo " "$TOML" | head -1 | cut -d'=' -f2 | tr -d '[]' | tr ',' '\n' | tr -d '"' | tr -d ' ' | grep -v '^$' ;;
   esac
 }
-echo "classifying: $(basename $(pwd)) [$MANAGER]"
+echo "classifying: $(basename "$(pwd)") [$MANAGER]"
 echo "---"
 PKGS=$(get_manager_packages "$MANAGER")
 if [ -z "$(echo $PKGS | tr -d ' \n')" ]; then
@@ -72,9 +79,9 @@ for cat in $CATEGORIES; do
   echo "  wrote: [dependencies.$MANAGER.$cat]"
 done
 TS=$(date '+%Y-%m-%d_%H-%M-%S')
-MGR_LOG=~/project/project_path/data/log/dep/input/managers
+MGR_LOG="$PTH_ROOT/data/log/dep/input/managers"
 mkdir -p "$MGR_LOG"
-echo "project=$(basename $(pwd))" > "$MGR_LOG/$TS.txt"
+echo "project=$(basename "$(pwd)")" > "$MGR_LOG/$TS.txt"
 echo "ts=$TS" >> "$MGR_LOG/$TS.txt"
 echo "manager=$MANAGER" >> "$MGR_LOG/$TS.txt"
 echo "user=$USER" >> "$MGR_LOG/$TS.txt"

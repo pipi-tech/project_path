@@ -1,9 +1,10 @@
+import os
+from pathlib import Path
 from textual.widgets import Static, Label, DataTable
 from textual.reactive import reactive
-from pathlib import Path
 
-BASE     = Path.home() / "project/project_path"
-REG_CONF = BASE / "data/registry.conf"
+_PTH_ROOT = Path(os.environ.get("PTH_ROOT", Path(__file__).parent.parent.parent.parent))
+REG_CONF = _PTH_ROOT / "data/registry.conf"
 
 def read_registry():
     projects = []

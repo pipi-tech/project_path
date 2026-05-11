@@ -1,0 +1,92 @@
+======================================================
+  PROJECT_PATH COMMAND REFERENCE
+  09 F9 11 02 9D 74 E3 5B D8 41 56 C5 63 56 88 C0
+======================================================
+
+===================( navigation )====================
+proj                          → list all projects
+proj <name>                   → enter project, activate venv
+new <name>                    → create new project via wizard
+
+===================( registry )=======================
+reg list                      → show all registered projects
+reg show <name>               → show one project entry
+reg history                   → show full registry log
+reg history <name>            → show log for one project
+reg remove <name>             → remove project from registry
+
+===================( builder )========================
+build                         → run full build pipeline on current toml
+build <toml>                  → run full build pipeline on specific toml
+drift                         → check fingerprint drift for current project
+fingerprint                   → generate fingerprint for current project
+
+===================( deps )===========================
+deps compare                  → compare installed vs toml
+deps add <dep>                → add dep to toml and install
+deps add-only <dep>           → add dep to toml only
+deps install                  → install all deps from toml
+
+===================( config )==========================
+domains set                   → fill log.active from type registry
+domains show                  → show active log domains
+domains types                 → list all types in type registry
+domains add-type <t> <d>      → add new type to type registry
+
+===================( logs )===========================
+clearLogs                     → wipe all terminal log input folders
+tailLogs                      → live watch of all log input folders
+
+===================( master files )===================
+msrc                          → write master src reference file
+mlog                          → write master log reference file
+
+===================( template )=======================
+tpl update                    → snapshot current structure to template
+tpl stamp <target>            → clone structure to target with placeholders
+tpl show                      → view current structure snapshot
+tpl tree                      → live tree view of project_path
+
+===================( tui )============================
+tui                           → launch full TUI dashboard
+
+===================( engines — coming )===============
+state                         → show project state (IDLE/ACTIVE/BUILD)
+lock <name>                   → lock a project
+unlock <name>                 → unlock a project
+
+===================( session )========================
+session show              → show current session hash + identity
+session active            → show all live and dead sessions
+session clean             → remove dead session hash files
+session history           → show all past session log entries
+session find <hash>       → trace all activity for a session hash
+
+===================( apt )============================
+aptlist manual            → show manually installed apt packages
+aptlist all               → show all installed apt packages
+aptlist search <term>     → search installed packages
+aptlist all-managers      → show apt + snap + pip + cargo + flatpak
+
+===================( deps classification )============
+classify [manager]        → classify deps by category (default: pip)
+classify apt              → classify apt packages
+classify npm              → classify npm packages
+onboard                   → copy base pkg_classes to current project
+migrate                   → upgrade project.toml to new format
+
+===================( package managers )===============
+pkg_managers list              → show all managers + package counts
+pkg_managers detect            → detect active managers in current project
+pkg_managers classify <mgr>    → classify packages for a manager
+
+===================( doc worker )=====================
+doc init [name] [root]    → scaffold docs + gen ref + open session
+doc ref  [name] [root]    → regenerate ref/SCRIPTS.md from src/
+doc session open          → open a session manually
+doc session close         → close current session
+doc session show          → show active session
+doc deps <dep> <mgr>      → log dep install to changelog
+doc log  [name]           → list session logs for project
+doc edit [name]           → open latest session in editor
+doc migrate               → doc init all registered projects
