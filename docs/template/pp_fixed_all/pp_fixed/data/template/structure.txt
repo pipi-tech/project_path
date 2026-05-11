@@ -1,4 +1,0 @@
-# project_path structure
-# generated: (run: tpl update to regenerate)
-# node: <NODE>
-# regenerate this file by running: tpl update
